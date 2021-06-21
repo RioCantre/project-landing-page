@@ -19,7 +19,7 @@ Build a multi-section landing page. This project aims to give a real-world scena
 - [W3schools](https://www.w3schools.com/)
 - [Ouch!](https://icons8.com/illustrations)
 
-### License
 
+## License
 Content of this repository is intended only for [ Udacity](https://www.udacity.com)'s Landing Page project. All content is Copyright @ 2021 - Rio Cantre.
  
