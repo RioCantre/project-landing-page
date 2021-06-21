@@ -1,0 +1,57 @@
+body {
+    max-width: 100%;
+    background-color: #FFF7EA;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    width: 500px;
+}
+.welcome img {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 40px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+li a {
+    text-decoration: none;
+    padding: 0 60px ;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;  
+    
+}
+h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+}
+p {
+    width: 400px;
+}
+.section-1,
+.section-2,
+.section-3 {
+    max-width: 500vh;
+    max-height: 500vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    padding: 100px 0;
+}
+.side-a{
+    padding:0 20px;
+}
+.side-b {
+    padding:0 30px;
+}
