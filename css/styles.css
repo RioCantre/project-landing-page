@@ -1,11 +1,17 @@
 body {
-    max-width: 100%;
     background-color: #FFF7EA;
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    
 }
+.container {
+    max-width: 100%;
 
+}
 img {
     width: 500px;
+    height: 420px;
 }
 .welcome img {
     display: flex;
@@ -32,6 +38,10 @@ li a {
     font-size: 15px;  
     
 }
+hr {
+    color: #333333;
+    opacity: 20%;
+}
 h2 {
     font-family: 'Raleway', sans-serif;
     font-size: 40px;
@@ -42,16 +52,75 @@ p {
 .section-1,
 .section-2,
 .section-3 {
-    max-width: 500vh;
-    max-height: 500vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    width: 25vh;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: auto;
-    padding: 100px 0;
+    padding: 16em 0;
 }
-.side-a{
-    padding:0 20px;
+.section-2 {
+    width: 100vw;
+    background-color: #B5817F;
 }
+.side-a,
 .side-b {
-    padding:0 30px;
+    padding: 0 3em;
+}
+.inquiry {
+    text-align: center;
+}
+.inquiry img {
+    width: 300px;
+    height: 300px;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+}
+.inquiry p {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+}
+.inquiry h2 {
+    margin-bottom: 0;
+}
+.email {
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #333333;
+    background-color: #FCEFDA;
+}
+.sign-up {
+    width: 150px;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #B5817F;
+    border: 1px solid #333333;
+    color: #FFF7EA;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 40px;
+    margin: auto;
+    background-color: #E0856C;
+    background-size: cover;
+    font-size: 10px;
+    color: #FFF7EA;
+    margin-top: 100px;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFF7EA;
+}
+footer a:hover {
+    color: #B5817F;
 }
