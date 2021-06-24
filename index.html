@@ -8,28 +8,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&family=Raleway:wght@400;500&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
-
 </head>
 <body>
-    <header>
-        <div class="welcome">
-            <h2>Home</h2>
-            <img src="image/welcome.png" alt="">
-        </div>
-        <nav >
-            <ul id="navbar__list">
-                
-            </ul>
-        </nav>
+    <header id="header" class="welcome">
+        <h2>Home</h2>
+        <img src="image/welcome.png" alt="">
     </header>
-    <hr>
+    <nav  id="nav-menu" >
+        <ul id="navbar">
+            <li>
+                <a href="javascript:void(0)">Home</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">Work</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">About</a>
+            </li>
+            <li>
+                <a href="javascript:void(0)">Activities</a>
+            </li>
+        </ul>
+    </nav>
     <main>
         <section class="section" id="section-1">
             <h2>Work</h2>
             <div class="content-left">
-                <img src="/image/work.png" alt="">
-            </div>
-            <div class="content-right">
                 <h3>My working life</h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, odio? Facere cum harum saepe tenetur velit pariatur explicabo laudantium, soluta, quae voluptatem facilis, non quia aut voluptates voluptate eveniet id.
@@ -43,7 +47,7 @@
         <section class="section" id="section-2">
             <h2>About</h2>
             <div class="content-left">
-                <h3>My working life</h3>
+                <h3>Get to know me</h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, odio? Facere cum harum saepe tenetur velit pariatur explicabo laudantium, soluta, quae voluptatem facilis, non quia aut voluptates voluptate eveniet id.
                 </p>
@@ -52,17 +56,11 @@
                     <p>Lorem ipsum...</p>
                 </div>
             </div>
-            <div class="content-right">
-                <img src="/image/about.png" alt="">
-            </div>
         </section>
         <section class="section"  id="section-3">
             <h2>Activities</h2>
-            <div class="content-left">
-                <img src="/image/activities.png" alt="">
-            </div>
             <div class="content-right">
-                <h3>My working life</h3>
+                <h3>Let's do something</h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, odio? Facere cum harum saepe tenetur velit pariatur explicabo laudantium, soluta, quae voluptatem facilis, non quia aut voluptates voluptate eveniet id.
                 </p>
@@ -73,7 +71,7 @@
             </div>
         </section>
         <hr>
-        <section class="inquiry">
+        <section class="inquiry" id="section-4">
             <img src="/image/email.png" alt="">
             <h3>Let's Get in Touch!</h3>
             <p>
@@ -90,5 +88,6 @@
             </p>
         </footer>
     </main>
+    <script src="/js/app.js"></script>
 </body>
 </html>
