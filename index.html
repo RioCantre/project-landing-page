@@ -12,65 +12,111 @@
 <body>
     <header id="header" class="welcome">
         <h2>Home</h2>
+        <h3>Welcome!</h3>
+        <p class="header-p">Lorem ipsum dolor sit amet.</p>
         <img src="image/welcome.png" alt="">
     </header>
+
     <nav  id="nav-menu" >
         <ul id="navbar">
             <li>
-                <a href="javascript:void(0)">Home</a>
+                <a href="javascript:void(0)"  class="btn">Home</a>
             </li>
             <li>
-                <a href="javascript:void(0)">Work</a>
+                <a href="javascript:void(0)"  class="btn">Work</a>
             </li>
             <li>
-                <a href="javascript:void(0)">About</a>
+                <a href="javascript:void(0)"  class="btn">About</a>
             </li>
             <li>
-                <a href="javascript:void(0)">Activities</a>
+                <a href="javascript:void(0)"  class="btn">Activities</a>
             </li>
         </ul>
     </nav>
+ 
     <main>
         <section class="section" id="section-1">
             <h2>Work</h2>
-            <div class="content-left">
+            <div>
                 <h3>My working life</h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, odio? Facere cum harum saepe tenetur velit pariatur explicabo laudantium, soluta, quae voluptatem facilis, non quia aut voluptates voluptate eveniet id.
                 </p>
-                <button type="button" class="collapsible">Open Collapsible</button>
-                <div class="content">
-                    <p>Lorem ipsum...</p>
+                <div class="hidden-content">
+                    <button type="button" class="collapsible" id="content-light">All my resposibilities</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="section" id="section-2">
             <h2>About</h2>
-            <div class="content-left">
+            <div>
                 <h3>Get to know me</h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, odio? Facere cum harum saepe tenetur velit pariatur explicabo laudantium, soluta, quae voluptatem facilis, non quia aut voluptates voluptate eveniet id.
                 </p>
-                <button type="button" class="collapsible">Open Collapsible</button>
-                <div class="content">
-                    <p>Lorem ipsum...</p>
+                <div class="hidden-content">
+                    <button type="button" class="collapsible">Know more about me</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        <ul>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                            <li>
+                                Lorem ipsum dolor sit amet.
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
         <section class="section"  id="section-3">
             <h2>Activities</h2>
-            <div class="content-right">
+            <div>
                 <h3>Let's do something</h3>
                 <p>
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat, odio? Facere cum harum saepe tenetur velit pariatur explicabo laudantium, soluta, quae voluptatem facilis, non quia aut voluptates voluptate eveniet id.
                 </p>
-                <button type="button" class="collapsible">Open Collapsible</button>
-                <div class="content">
-                    <p>Lorem ipsum...</p>
+                <div class="hidden-content">
+                    <button type="button" class="collapsible" id="content-light">See all my activities</button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            <ul>
+                                <li>
+                                    Lorem ipsum dolor sit amet.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet.
+                                </li>
+                                <li>
+                                    Lorem ipsum dolor sit amet.
+                                </li>
+                            </ul>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
-        <hr>
+
         <section class="inquiry" id="section-4">
             <img src="/image/email.png" alt="">
             <h3>Let's Get in Touch!</h3>
@@ -79,13 +125,13 @@
             </p>
             <input type="text" placeholder="Email Address" class="email"> <button  class="sign-up">Sign up</button>
         </section>
-        <footer class="page__footer">
-            <p>
+        <footer class="page-footer">
+            <div>
                 Copyright &copy; 2021 - <a href="https://musing-ptolemy-95f7d2.netlify.app/index.html" target="_blank">Rio Cantre</a>
                 <br />
                 Illustration by <a href="https://icons8.com/illustrations/author/5e7e24ce01d0360013bb7479" target="_blank">Natasha Remarchuk</a>
                 from <a href="https://icons8.com/illustrations" target="_blank">Ouch!</a>
-            </p>
+            </div>
         </footer>
     </main>
     <script src="/js/app.js"></script>
