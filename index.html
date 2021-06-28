@@ -10,16 +10,18 @@
     <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
+
+    <span class="myBtn" id="goTop" title="Go to top">Top</span>
+
     <header id="header" class="welcome">
-        <h2>Home</h2>
-        <h3>Welcome!</h3>
+        <h2>Welcome!</h2>
         <p class="header-p">Lorem ipsum dolor sit amet.</p>
         <img src="image/welcome.png" alt="">
     </header>
 
-    <nav  id="nav-menu" >
-        <ul id="navbar">
-            <li>
+    <nav class="nav-menu" >
+        <ul id="navBar">
+            <!-- <li>
                 <a href="javascript:void(0)"  class="btn">Home</a>
             </li>
             <li>
@@ -30,14 +32,13 @@
             </li>
             <li>
                 <a href="javascript:void(0)"  class="btn">Activities</a>
-            </li>
+            </li> -->
         </ul>
     </nav>
- 
+    
     <main>
-        <section class="section" id="section-1">
-            <h2>Work</h2>
-            <div>
+        <section class="section" data-nav="Work" id="section-1">
+            <div >
                 <h3>My working life</h3>
                 <p>
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt hic adipisci tempora soluta aspernatur temporibus
@@ -56,7 +57,7 @@
                     <button type="button" class="collapsible" id="light-section-1">All my resposibilities</button>
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <ul>
+                        <ol>
                             <li>
                                 Lorem ipsum dolor sit amet.
                             </li>
@@ -66,13 +67,12 @@
                             <li>
                                 Lorem ipsum dolor sit amet.
                             </li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section" id="section-2">
-            <h2>About</h2>
+        <section class="section" data-nav="About" id="section-2">
             <div>
                 <h3>Get to know me</h3>
                 <p>
@@ -92,7 +92,7 @@
                     <button type="button" class="collapsible">Know more about me</button>
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <ul>
+                        <ol>
                             <li>
                                 Lorem ipsum dolor sit amet.
                             </li>
@@ -102,13 +102,12 @@
                             <li>
                                 Lorem ipsum dolor sit amet.
                             </li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section"  id="section-3">
-            <h2>Activities</h2>
+        <section class="section" data-nav="Activities" id="section-3">
             <div>
                 <h3>Let's do something</h3>
                 <p>
@@ -118,7 +117,7 @@
                     <button type="button" class="collapsible" id="light-section-2">See all my activities</button>
                     <div class="content">
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                        <ul>
+                        <ol>
                             <li>
                                 Lorem ipsum dolor sit amet.
                             </li>
@@ -128,19 +127,21 @@
                             <li>
                                 Lorem ipsum dolor sit amet.
                             </li>
-                        </ul>
+                        </ol>
                     </div>
                 </div>
             </div>
         </section>
         <br />
-        <section class="inquiry" id="section-4">
-            <img src="/image/email.png" alt="">
-            <h3>Let's Get in Touch!</h3>
-            <p>
-                Sign up for free to get more updates and goodies!
-            </p>
-            <input type="text" placeholder="Email Address" class="email"> <button  class="sign-up">Sign up</button>
+        <section class="section" data-nav="Inquiry" id="section-4">
+            <div class="inquiry">
+                <img src="/image/email.png" alt="">
+                <h3>Let's Get in Touch!</h3>
+                <p>
+                    Sign up for free to get more updates and goodies!
+                </p>
+                <input type="text" placeholder="Email Address" class="email"> <button  type="button" class="sign-up">Sign up</button>
+            </div>
         </section>
         <footer class="page-footer">
             <div>
