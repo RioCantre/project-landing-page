@@ -45,8 +45,8 @@ li{
     color: #333333;
     
 }
-li:hover,
-.active-class{
+.active-class,
+li:hover {
     background-color: #FAE5C2;
     color:#E0856C;
     cursor: pointer;
@@ -56,6 +56,9 @@ li:hover,
     position: fixed;
     top: 0;
     width: 100%;
+}
+.sticky + section {
+    padding-top: 30px;
 }
 
 /* header style */
@@ -83,10 +86,10 @@ p,
     width: 600px;
     text-align: justify;
 }
-#section-1,
-#section-2,
-#section-3,
-#section-4{
+#section1,
+#section2,
+#section3,
+#section4{
     width: 25vh;
     height: 38vh;
     display: flex;
@@ -95,7 +98,7 @@ p,
     margin: auto;
     padding: 16em 0;
 }
-#section-2 {
+#section2 {
     width: 100vw;
     background-color: #B5817F;
 }
@@ -216,6 +219,7 @@ footer,
     background-color: #6945B6;
 }
 
+/* media queries for several devices */
 @media only screen and (max-width: 640px) {
     #header h2 {
         margin-top: 10px;
@@ -242,10 +246,10 @@ footer,
     li{
         padding: 20px 20px;
     }
-    #section-1,
-    #section-2,
-    #section-3,
-    #section-4{
+    #section1,
+    #section2,
+    #section3,
+    #section4{
         padding: 20em 0;
     }
     p,
@@ -281,15 +285,18 @@ footer,
     li{
         padding: 20px 15px;
     }
-    #section-1,
-    #section-2,
-    #section-3 {
+    #section1,
+    #section2,
+    #section3 {
         padding: 21em 0;
-        height: 60vh;
+        height: 38vh;
     }
     p,
     .hidden-content {
         width: 400px;
+    }
+    .sticky + section {
+    padding-top: 30px;
     }
 }
 
@@ -298,13 +305,13 @@ footer,
     h3 {
         margin-bottom: 0;
     }
-    #section-1,
-    #section-2,
-    #section-3 {
+    #section1,
+    #section2,
+    #section3 {
         padding: 21em 0;
         height: 60vh;
     }
-     #section-4 {
+     #section4 {
         height: 5vh;
     }
     p,
@@ -340,11 +347,11 @@ footer,
     li{
         padding: 20px 9px;
     }
-    #section-1,
-    #section-2,
-    #section-3{
+    #section1,
+    #section2,
+    #section3{
         padding: 21em 0;
-        height: 85vh;
+        height: 80vh;
     }
     p,
     .hidden-content {
@@ -355,6 +362,9 @@ footer,
     }
     .sign-up {
         width: 300px; 
+    }
+    .sticky + section {
+        padding-top: 30px;
     }
 
 }
@@ -370,13 +380,12 @@ footer,
     li{
         padding: 20px 5px;
     }
-    #section-1,
-    #section-2,
-    #section-3{
+    #section1,
+    #section2,
+    #section3{
         padding: 21em 0;
-        height: 80vh;
     }
-    #section-4 {
+    #section4 {
         height: 5vh;
     }
     .email {
@@ -392,11 +401,11 @@ footer,
         width:100%;
         overflow-x:hidden;
     }
-    #section-1,
-    #section-2,
-    #section-3{
+    #section1,
+    #section2,
+    #section3{
         padding: 25em 0;
-        height: 60vh;
+        height: 38vh;
     }
 }
 @media (max-width: 320px){

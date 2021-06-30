@@ -18,6 +18,7 @@ Build a multi-section landing page. This project aims to give a real-world scena
 ## Credit
 - [W3schools](https://www.w3schools.com/)
 - [Ouch!](https://icons8.com/illustrations)
+- [Random paragraphs](https://randomword.com/paragraph)
 
 
 ## License

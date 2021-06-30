@@ -1,26 +1,59 @@
-var docElement = document.documentElement;
-var navList = document.getElementById('navBar');
-var fragment = document.createDocumentFragment();
-var navSection = document.querySelectorAll('section');
-var backToTop = document.getElementById('goTop');
-console.log(navSection);
-console.log(backToTop);
+// global variables
+const navList = document.getElementById('navBar');
+const fragment = document.createDocumentFragment();
+const navSection = document.querySelectorAll('section');
+const backToTop = document.getElementById('goTop');
+
 
 
 // build the nav
 function buildNav() {
     navSection.forEach(function (navSection) {
-        var li = document.createElement('li');
+        let li = document.createElement('li');
         li.textContent = navSection.getAttribute('data-nav');
         fragment.appendChild(li);
-        console.log(li);
     });
     
     navList.appendChild(fragment);
 }
 
 
-// build a button to scroll the page back to Top
+// jump to every section
+function jumpToSection() {
+    let sections = document.getElementsByTagName('section');
+    let list = document.querySelectorAll('li');
+
+    for (let i = 0; i < list.length; i++){
+        let sectionVh = sections[i].offsetTop;
+
+
+        list[i].addEventListener('click', function () {
+            window.scrollTo({
+                top: sectionVh,
+                behavior: 'smooth'
+            });
+        });
+    }
+}
+
+
+// make active navigation list
+function activeState() {
+    let btns = document.querySelectorAll('li');
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+        let current = document.getElementsByClassName('active-class');
+        if (current.length > 0) { 
+            current[0].className = current[0].className.replace('active-class', '');
+      } 
+      this.className += 'active-class';  
+      });
+    }
+}
+
+
+
+// build a button to scroll the page back to top
 window.addEventListener('scroll', function () {
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
         backToTop.classList.add('myBtn');
@@ -28,11 +61,14 @@ window.addEventListener('scroll', function () {
         backToTop.classList.remove('myBtn');
         
     }
-})
+});
+
+
+
+// click event to scroll back to the top
 function goToTop() {
     document.getElementById('goTop').addEventListener('click', function () {
         window.scrollTo({
-            left: 0,
             top: 0,
             behavior: 'smooth'
         });
@@ -40,11 +76,12 @@ function goToTop() {
 }
 
 
-// sticky nav
+
+// sticky navigation bar
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById('navBar');
-var sticky = navbar.offsetTop;
+let navbar = document.getElementById('navBar');
+let sticky = navbar.offsetTop;
 
 function myFunction() {
     if (window.pageYOffset >= sticky) {
@@ -55,14 +92,15 @@ function myFunction() {
 }
 
 
-// collapsible content
-var coll = document.getElementsByClassName('collapsible');
-var i;
+
+// addtional collapsible content in every section
+let coll = document.getElementsByClassName('collapsible');
+let i;
 
 for (i = 0; i < coll.length; i++) {
     coll[i].addEventListener('click', function () {
         this.classList.toggle('active');
-        var content = this.nextElementSibling;
+        let content = this.nextElementSibling;
         if (content.style.display === 'block') {
         content.style.display = 'none';
         } else {
@@ -72,6 +110,12 @@ for (i = 0; i < coll.length; i++) {
 }
 
 
-buildNav();
+
+// function calls
 goToTop();
+buildNav();
 myFunction();
+activeState();
+jumpToSection();
+
+
