@@ -3,6 +3,7 @@ const navList = document.getElementById('navBar');
 const fragment = document.createDocumentFragment();
 const navSection = document.querySelectorAll('section');
 const backToTop = document.getElementById('goTop');
+const section = document.querySelectorAll('.section-content');
 
 
 
@@ -15,19 +16,15 @@ function buildNav() {
     });
     
     navList.appendChild(fragment);
-}
 
-
-// jump to every section
-function jumpToSection() {
+    
     let sections = document.getElementsByTagName('section');
     let list = document.querySelectorAll('li');
 
-    for (let i = 0; i < list.length; i++){
+    for (let i = 0; i < list.length; i++) {
         let sectionVh = sections[i].offsetTop;
 
-
-        list[i].addEventListener('click', function () {
+        list[i].addEventListener('click',() => {
             window.scrollTo({
                 top: sectionVh,
                 behavior: 'smooth'
@@ -37,28 +34,52 @@ function jumpToSection() {
 }
 
 
-// make active navigation list
-function activeState() {
-    let btns = document.querySelectorAll('li');
-    for (let i = 0; i < btns.length; i++) {
-        btns[i].addEventListener("click", function () {
-        let current = document.getElementsByClassName('active-class');
-        if (current.length > 0) { 
-            current[0].className = current[0].className.replace('active-class', '');
-      } 
-      this.className += 'active-class';  
-      });
-    }
+
+// Put section into view
+function sectionInView() {
+    let minor = window.innerHeight;
+    sectionInViewIndex = -1;
+
+    navSection.forEach((navSection, index) => {
+        let offset = navSection.getBoundingClientRect();
+        if (Math.abs(offset.top) < minor) {
+            minor = Math.abs(offset.top);
+            sectionInViewIndex = index;
+        }
+    });
+    return sectionInViewIndex;
 }
 
+// make every section active state
+function activeState() {
+    sectionInViewIndex = sectionInView();
+
+    if (sectionInViewIndex != -1) {
+        let navTagList = document.querySelectorAll('li');
+        for (let i = 0; i < navSection.length; i++){
+            if (i == sectionInViewIndex) {
+                navTagList[i].classList.add('active-class');
+            } else {
+                navTagList[i].classList.remove('active-class');
+                
+                
+            }
+        };
+    };
+}
+
+document.addEventListener('scroll', activeState);
 
 
 // build a button to scroll the page back to top
 window.addEventListener('scroll', function () {
     if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
         backToTop.classList.add('myBtn');
+        navTagList[i].classList.remove('active-class');
     } else {
         backToTop.classList.remove('myBtn');
+        navTagList[i].classList.remove('active-class');
+        
         
     }
 });
@@ -115,7 +136,6 @@ for (i = 0; i < coll.length; i++) {
 goToTop();
 buildNav();
 myFunction();
-activeState();
-jumpToSection();
+
 
 
