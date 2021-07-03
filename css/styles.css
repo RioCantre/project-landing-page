@@ -90,8 +90,8 @@ p,
 #section2,
 #section3,
 #section4{
-    width: 25vh;
-    height: 38vh;
+    width: 35vh;
+    height: 45vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -289,14 +289,14 @@ footer,
     #section2,
     #section3 {
         padding: 21em 0;
-        height: 38vh;
+        height: 30vh;
     }
     p,
     .hidden-content {
         width: 400px;
     }
-    .sticky + section {
-    padding-top: 30px;
+    .sticky + main {
+    padding-top: 40px;
     }
 }
 
@@ -307,12 +307,10 @@ footer,
     }
     #section1,
     #section2,
-    #section3 {
+    #section3,
+    #section4 {
         padding: 21em 0;
         height: 60vh;
-    }
-     #section4 {
-        height: 5vh;
     }
     p,
     .hidden-content {
@@ -337,6 +335,13 @@ footer,
     li{
         padding: 20px 10px;
     }
+    #section1,
+    #section2,
+    #section3,
+    #section4 {
+        padding: 21em 0;
+        height: 60vh;
+    }
 
 }
 @media only screen and (max-width: 390px){
@@ -349,7 +354,8 @@ footer,
     }
     #section1,
     #section2,
-    #section3{
+    #section3,
+    #section4{
         padding: 21em 0;
         height: 80vh;
     }
@@ -382,11 +388,10 @@ footer,
     }
     #section1,
     #section2,
-    #section3{
+    #section3,
+    #section4{
         padding: 21em 0;
-    }
-    #section4 {
-        height: 5vh;
+        height: 80vh;
     }
     .email {
         width: 280px;
@@ -401,13 +406,11 @@ footer,
         width:100%;
         overflow-x:hidden;
     }
-    #section1,
-    #section2,
-    #section3{
-        padding: 25em 0;
-        height: 38vh;
+    .welcome img {
+        width: 250px;
+        height: 220px;
     }
-}
+
 @media (max-width: 320px){
     ul, #navbar {
         padding: 10px 5px;
@@ -420,6 +423,33 @@ footer,
         margin: 0 10px;
     }
 }
-@media (max-width: 312px){
-
+@media (max-width: 280px){
+     ul, #navbar {
+        padding: 10px 3px;
+        padding-left: 0;
+        font-size: 10px;
+    }
+    li{
+        padding: 20px 3px;
+    }
+    #section1,
+    #section2,
+    #section3,
+    #section4{
+        padding: 21em 0;
+        height: 40vh;
+    }
+    p,
+    .hidden-content {
+        width: 250px;
+    }
+    .email {
+        width: 250px;
+    }
+    .sign-up {
+        width: 250px; 
+    }
+    .sticky + section {
+        padding-top: 30px;
+    }
 }
